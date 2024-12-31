@@ -12,7 +12,6 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-
 def login_required(u):
     def wrapper(*args, **kwargs):
         if 'user_id' not in session:
